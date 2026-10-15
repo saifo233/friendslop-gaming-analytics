@@ -35,8 +35,6 @@ All findings describe **these 33 hand-picked games**, not the whole market. They
 
 **Peak intensity** = all-time peak concurrent players / estimated owners. A higher value means a larger share of owners were playing at the same time.
 
-A note on medians: Simulation would rank first on *average* peak intensity (1.78%), but that is driven almost entirely by one game (Schedule I, 5.1%). Its median is 1.02%, so medians are used for all comparisons.
-
 For a developer, the data suggest that technical polish matters more than leaning into chaos: reviewers use bug-related words far more often in negative reviews, while chaos-related words are rare in both groups. This is a hypothesis from a small sample, not a tested conclusion.
 
 ## 3. Dashboard
@@ -61,13 +59,13 @@ Slicers for era and sub-genre are synced across pages.
 ### Sources
 | Data | Source | Notes |
 |---|---|---|
-| Game-level data (release year, price, peak players, lifetime review counts, estimated owners, estimated revenue) | Steam and Gamalytic, copied by hand | Collected [DATE]. [List which fields came from which site.] Owners and revenue are Gamalytic estimates. |
-| Player reviews | Steam, exported with the Steam reviews exporter at exportcomments.com | The 100 most recent reviews per game, collected [DATE]. |
+| Game-level data (release year, price, peak players, lifetime review counts, estimated owners, estimated revenue) | Steam and Gamalytic, copied by hand | Game title, Release year, Price, Peak players, Total reviews, Positive reviews, Negative reviews collected from Steam. Owners and revenue are Gamalytic estimates. All Collected October 1st 2026.|
+| Player reviews | Steam, exported with the Steam reviews exporter at exportcomments.com | The 100 most recent reviews per game, collected October 1st 2026. |
 
 **Collection method:** the game-level table was compiled manually by copying figures from each game's Steam page and Gamalytic profile into a spreadsheet. Reviews were exported per game with a third-party exporter, then translated and cleaned as described below. No scraping scripts or APIs were used.
 
 ### Game inclusion criteria
-33 games were hand-picked: multiplayer/co-op games centered on playing with friends that appear in community or press discussion of friendslop or sit close to it. The list deliberately includes older social games (2015 to 2022) as a baseline against the 2023+ wave, and includes borderline titles (Among Us, Phasmophobia, Overcooked 2, Keep Talking and Nobody Explodes). [EDIT this paragraph to match the criteria you actually used.]
+33 games were hand-picked: multiplayer/co-op games centered on playing with friends that appear in community or press discussion of friendslop or sit close to it. The list deliberately includes older social games (2015 to 2022) as a baseline against the 2023+ wave, and includes titles like: Among Us, Phasmophobia, Overcooked 2, Keep Talking and Nobody Explodes).
 
 | | Count |
 |---|---|
@@ -127,8 +125,6 @@ Slicers for era and sub-genre are synced across pages.
 
 **Why not plain `%word%` wildcards?** Substring matching creates false hits in gaming text: `kill` matches skill, `troll` matches strolling and controller, and `mic` matches dynamic. On this data set `%kill%` found 63 reviews against 38 for word-start matching.
 
-**A correction I made along the way:** an early version counted the word "friends" as chaos. It appeared in 459 reviews and produced about 72% of all chaos matches. It describes playing with friends, not chaos, so I removed it and rebuilt the index. The direction of the results held, but the size of the chaos effect shrank.
-
 ### Analysis
 - Medians are used throughout because owners and peak players are heavily skewed (the top five games hold roughly half of all estimated owners).
 - Free games are kept in every analysis except revenue comparisons, because their revenue comes from sources the data does not capture consistently.
@@ -138,7 +134,7 @@ Slicers for era and sub-genre are synced across pages.
 
 - **Small, hand-picked sample (n = 33).** Groups have only 3 to 12 games, and the list likely over-represents well-known games. Games that flopped may be missing, so the results describe these games, not the genre.
 - **Manual data entry.** The game-level data was copied by hand, so transcription errors are possible. Outliers were checked against the sources, and several were corrected (for example, swapped owner and revenue values for one game), but small errors may remain.
-- **Owners and revenue are estimates** from Gamalytic's model and can be off. Revenue for free-to-play games is not comparable with paid games and is excluded from revenue comparisons. [Note anything you calculated yourself.]
+- **Owners and revenue are estimates** from Gamalytic's model and can be off. Revenue for free-to-play games is not comparable with paid games and is excluded from revenue comparisons.
 - **Reviews are the 100 most recent per game**, so they reflect current player sentiment, not sentiment at launch. Time windows differ by game (a few days for a huge game, months for a small one).
 - **Machine translation adds noise.** Half the reviews were translated automatically with Google Sheets' `GOOGLETRANSLATE`, which can mistranslate slang and gaming terms, and it failed on 18 reviews (excluded from scoring).
 - **Keyword matching is simple.** It cannot read negation ("not buggy") or context, and most reviews contain no keyword at all (chaos words appear in about 5% of Recommended reviews, jank words in about 13% of Not Recommended ones).
@@ -184,9 +180,3 @@ friendslop-gaming-analytics/
 ## 10. Tools
 
 SQL Server (T-SQL, SSMS), Power BI (DAX), Google Sheets (`GOOGLETRANSLATE`), Excel / CSV.
-
-## 11. Data use and disclaimer
-
-Review text is public Steam user content, included so the analysis can be reproduced; it remains the property of its authors. Estimated owners and revenue come from Gamalytic's estimates. If you are a rights holder and want something removed, please open an issue.
-
-*This is an independent analysis for learning purposes and is not affiliated with any game publisher, Steam, or Gamalytic. Game names belong to their respective owners.*
