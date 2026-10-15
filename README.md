@@ -1,4 +1,4 @@
-# Friendslop: Viral Peaks, Not Bigger Audiences
+# Friendslop Games Analysis
 
 **An analysis of 33 social multiplayer games and 3,000+ player reviews, built with SQL Server and Power BI.**
 
