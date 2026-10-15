@@ -168,8 +168,9 @@ friendslop-gaming-analytics/
 ## 8. How to reproduce
 
 1. In SQL Server Management Studio, import the CSVs with **Tasks > Import Flat File** into `dbo.Friendslop_Data` and `dbo.Friendslop_Reviews`. Set the review text columns to `nvarchar(MAX)` and allow nulls on the text columns. (The wizard stores the Yes/No flags as `bit`, which the script expects.)
-2. Run `sql/Friendslop_ChaosIndex.sql` section by section. It runs join checks, builds the keyword table, scored reviews, `dbo.ChaosIndex` and the view `dbo.vw_GameAnalysis`, and ends with the analysis queries (section 8). Requires SQL Server 2017 or newer.
-3. In Power BI Desktop, connect to SQL Server and load `vw_GameAnalysis` and `ReviewBucketHits`, related on `game_title` (one-to-many).
+2. Run `sql/Friendslop_ChaosIndex.sql` section by section. It runs join checks, builds the keyword table, scored reviews, `dbo.ChaosIndex` and the view `dbo.vw_GameAnalysis`, and ends with the analysis queries (section 8) and an export query for data/ChaosIndex_by_game.csv (section 9).
+3.  Requires SQL Server 2017 or newer.
+4. In Power BI Desktop, connect to SQL Server and load `vw_GameAnalysis` and `ReviewBucketHits`, related on `game_title` (one-to-many).
 
 ## 9. Possible next steps
 
