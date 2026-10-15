@@ -49,8 +49,9 @@ Three pages built in Power BI Desktop, connected to SQL Server:
 
 Slicers for era and sub-genre are synced across pages.
 
-**Live dashboard:** [open it here](PASTE-YOUR-DASHBOARD-LINK-HERE). It is interactive, so click the page buttons at the top and use the era and sub-genre filters. If the link does not load, the screenshots below show every page, and a PDF export and the `.pbix` file are in `dashboard/`.
+**Live dashboard:** [open it here](https://app.powerbi.com/view?r=eyJrIjoiMDU2YmEzZDgtOTU4Zi00MDk2LThlYjMtYTI5Nzc5Nzk1NzE2IiwidCI6IjBmZWQwM2EzLTQwMmQtNDYzMy1hOGNkLThiMzA4ODIyMjUzZSIsImMiOjEwfQ%3D%3D). It is interactive, so click the page buttons at the top and use the era and sub-genre filters. If the link does not load, the screenshots below show every page, and a PDF export and the `.pbix` file are in `dashboard/`.
 
+![Page 1](screenshots/page1_market_overview.png)
 ![Page 2](screenshots/page2_acquisition_virality.png)
 ![Page 3](screenshots/page3_sentiment_quality.png)
 
