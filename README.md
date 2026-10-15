@@ -4,7 +4,7 @@
 
 > "Friendslop" is an informal community term for cheap, chaotic co-op and social multiplayer games built around playing with friends. It is a market/community label, not a quality judgment. This project tests what the data say about why the sub-genre took off.
 
-**[View the live interactive dashboard](PASTE-YOUR-DASHBOARD-LINK-HERE)** | [Static PDF](dashboard/Friendslop_Dashboard.pdf) | [Power BI file](dashboard/Friendslop_Dashboard.pbix)
+**[View the live interactive dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDU2YmEzZDgtOTU4Zi00MDk2LThlYjMtYTI5Nzc5Nzk1NzE2IiwidCI6IjBmZWQwM2EzLTQwMmQtNDYzMy1hOGNkLThiMzA4ODIyMjUzZSIsImMiOjEwfQ%3D%3D)** | [Static PDF](dashboard/Friendslop_Dashboard.pdf) | [Power BI file](dashboard/Friendslop_Dashboard.pbix)
 
 ![Dashboard page 1](screenshots/page1_market_overview.png)
 
