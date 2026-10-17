@@ -21,7 +21,7 @@ These findings describe **the 33 selected games in this project**, not the entir
 - **Newer games had higher peaks, but not larger estimated audiences.** Games released from 2023 onward had a median all-time peak of about 71K concurrent players, versus 21K for older games. Their median estimated owners were lower: 6.6M versus 8.5M.
 - **A few hits account for most of the 2025 peak.** *Schedule I*, *R.E.P.O.*, and *PEAK* made up about 89% of the combined all-time peak concurrent players for the 2025 releases in the sample.
 - **The $5–$9.99 band performed strongly among paid games in this sample.** It had the highest median peak player count (about 107K). This is an observed pattern in the selected games, not a universal pricing recommendation.
-- **Bug-related language appeared more often in negative reviews.** Jank/bug keywords appeared in 13.3% of “Not Recommended” reviews and 2.3% of “Recommended” reviews. Chaos/fun keywords appeared in 5.4% of “Recommended” reviews and 2.9% of “Not Recommended” reviews.
+- **Bug-related language appeared more often in negative reviews.** Jank/bug keywords appeared in 13.3% of “Not Recommended” reviews and 2.3% of “Recommended” reviews. Chaos/fun keywords appeared in 5.4% of “Recommended” reviews and 2.9% of “Not Recommended” reviews. These bugs can make a game's popularity increase when they do not break the flow of the game.
 
 The project uses a simple keyword-based **Chaos Index** to compare how often reviews mention chaos/fun, jank/bugs, and betrayal/sabotage. It is a transparent text-analysis approach, not a full sentiment or context-aware language model.
 
