@@ -117,4 +117,4 @@ The betrayal bucket is too sparse for strong analysis: it matched 57 reviews in 
 
 ## Main interpretation
 
-In this sample, bug-related terms appear more often in negative reviews than positive reviews, while chaos/fun terms are relatively uncommon in both. This suggests a hypothesis that technical issues may matter more to player reviews than chaos language alone. The project does not test that causal claim.
+In this sample, bug-related terms appear more often in negative reviews than positive reviews, while chaos/fun terms are relatively uncommon in both. This suggests a hypothesis that technical issues may forgive some bugs that produce entertainment for a short while, but not if they stay and are game-breaking.
