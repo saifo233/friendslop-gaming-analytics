@@ -4,7 +4,6 @@ This guide describes how to reproduce the SQL analysis and connect the resulting
 
 ## Requirements
 
-- SQL Server 2017 or newer
 - SQL Server Management Studio (SSMS)
 - Power BI Desktop
 - The project CSV files and SQL script
@@ -20,15 +19,13 @@ During import:
 
 - Set `review_text`, `translated_text`, and `text_clean` to `nvarchar(MAX)`.
 - Allow nulls in text columns where needed.
-- Confirm the `is_usable` and `is_very_short` flags are imported as `bit`, as expected by the SQL script.
+- Confirm the `is_usable` and `is_very_short` flags are imported as `bit`.
 
 Review the inferred data types before finishing the import wizard.
 
 ## 2. Run the SQL script
 
 Open `sql/Friendslop_ChaosIndex.sql` in SSMS and run it section by section.
-
-The script performs join checks, creates the keyword table, scores reviews, builds `dbo.ChaosIndex` and `dbo.vw_GameAnalysis`, and runs analysis queries in section 8. Section 9 contains an export query for `data/ChaosIndex_by_game.csv`.
 
 Run sections in order and check the output of the validation queries before continuing.
 
@@ -43,8 +40,4 @@ In Power BI Desktop:
 
 The report contains three pages: Market & Financial Overview, Player Acquisition & Virality, and Sentiment & Product Quality. Era and sub-genre slicers are synchronized across pages.
 
-## Notes
 
-- The original game-level data was collected manually from Steam and Gamalytic; reviews were exported using a third-party exporter. No scraping scripts or APIs were used.
-- Exact source estimates can change over time. The analysis uses the values collected on October 1, 2026.
-- If your local table names or database differ, adjust the connection and import settings accordingly.
