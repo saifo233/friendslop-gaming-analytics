@@ -23,6 +23,16 @@ These findings describe **the 33 selected games in this project**, not the entir
 - **The $5–$9.99 band performed strongly among paid games in this sample.** It had the highest median peak player count (about 107K). This is an observed pattern in the selected games, not a universal pricing recommendation.
 - **Bug-related language appeared more often in negative reviews.** Jank/bug keywords appeared in 13.3% of “Not Recommended” reviews and 2.3% of “Recommended” reviews. Chaos/fun keywords appeared in 5.4% of “Recommended” reviews and 2.9% of “Not Recommended” reviews. These bugs can make a game's popularity increase when they do not break the flow of the game.
 
+## Recommendations
+
+1. **Prioritize technical stability while preserving fun.** Bug- and jank-related keywords appeared more frequently in negative reviews than in positive reviews. Developers should address crashes, disruptive glitches, and frustrating performance issues while preserving the unpredictable moments that make social multiplayer games entertaining.
+
+2. **Design for memorable social interactions.** Chaos-related keywords alone showed little correlation with estimated audience size. Rather than relying on chaos as a selling point, developers should consider how mechanics such as proximity chat, cooperative tasks, physics-based interactions, and social deception encourage players to create funny or memorable moments together.
+
+3. **Best pricing for these games** The $5–$9.99 price band had the highest median peak player count among paid games in this sample. Developers could use this range as a starting point for market research, while considering production costs, comparable games, perceived value, and target audiences before setting a price.
+
+4. **Evaluate success using multiple metrics.** Peak concurrent players alone do not capture total audience size or sustained engagement. Developers should consider player counts alongside estimated ownership, review sentiment, and changes in activity over time.
+   
 ## Dashboard
 
 The Power BI report has three pages:
