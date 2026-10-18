@@ -1,6 +1,6 @@
 /* =====================================================================
-   FRIENDSLOP - CHAOS INDEX & ANALYSIS  (SQL Server / SSMS, 2017 or newer)
-   Needs TRANSLATE (2017+) and CREATE OR ALTER VIEW (2016 SP1+).
+   FRIENDSLOP - CHAOS INDEX & ANALYSIS 
+
    ===================================================================== */
 
 
@@ -81,9 +81,8 @@ GROUP BY s.review_id, s.game_title, s.review_type;
 GO
 
 
-/* ---------- 5. CHAOS INDEX PER GAME ----------
-   Each figure = % of scored reviews that contain at least one keyword
-   from that bucket.                                              */
+/* ---------- 5. CHAOS INDEX PER GAME ----------*/
+
 IF OBJECT_ID('dbo.ChaosIndex') IS NOT NULL DROP TABLE dbo.ChaosIndex;
 
 SELECT game_title,
@@ -97,13 +96,6 @@ INTO dbo.ChaosIndex
 FROM dbo.ReviewBucketHits
 GROUP BY game_title;
 GO
-
--- Sanity checks: 33 rows; reviews_scored sums to about 3,043
-SELECT COUNT(*) AS games, SUM(reviews_scored) AS total_scored FROM dbo.ChaosIndex;
-SELECT * FROM dbo.ChaosIndex ORDER BY chaos_fun_pct DESC;
-GO
-
-
 
 /* ---------- 6. JOINED VIEW  ---------- */
 CREATE OR ALTER VIEW dbo.vw_GameAnalysis AS
@@ -123,10 +115,7 @@ SELECT * FROM dbo.vw_GameAnalysis ORDER BY release_year, game_title;
 GO
 
 
-/* ---------- 7. DO CHAOS / JANK RATES RELATE TO SUCCESS? ----------
-   Pearson correlation (SQL Server has no built-in CORR). Owners and peak
-   players are heavily skewed, so they are log10-transformed first.
-   With n = 33 this is exploratory, not proof.                            */
+/* ---------- 7. DO CHAOS / JANK RATES RELATE TO SUCCESS? ----------  */
 WITH pairs AS (
     SELECT m.metric, v.outcome, CAST(m.x AS float) AS x, CAST(v.y AS float) AS y
     FROM dbo.vw_GameAnalysis a
