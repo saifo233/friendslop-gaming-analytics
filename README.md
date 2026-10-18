@@ -23,8 +23,6 @@ These findings describe **the 33 selected games in this project**, not the entir
 - **The $5–$9.99 band performed strongly among paid games in this sample.** It had the highest median peak player count (about 107K). This is an observed pattern in the selected games, not a universal pricing recommendation.
 - **Bug-related language appeared more often in negative reviews.** Jank/bug keywords appeared in 13.3% of “Not Recommended” reviews and 2.3% of “Recommended” reviews. Chaos/fun keywords appeared in 5.4% of “Recommended” reviews and 2.9% of “Not Recommended” reviews. These bugs can make a game's popularity increase when they do not break the flow of the game.
 
-The project uses a simple keyword-based **Chaos Index** to compare how often reviews mention chaos/fun, jank/bugs, and betrayal/sabotage. It is a transparent text-analysis approach, not a full sentiment or context-aware language model.
-
 ## Dashboard
 
 The Power BI report has three pages:
